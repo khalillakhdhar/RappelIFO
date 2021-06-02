@@ -1,6 +1,8 @@
 package servlets;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,16 +50,18 @@ public class ValidationServlet extends HttpServlet {
 		if(validation.validJour(dt.getJour(), dt.getMois(), dt.getAn()))
 		{
 			message=dt.toString()+" date valide";
+			System.out.println(message);
+
 		}
 		else
 		{
 			message=dt.toString()+" date invalide";
-			
+			System.out.println(message);
 		}
+		RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
 		request.setAttribute("message",message);
-		request.getRequestDispatcher("index.jsp").forward(request, response);
 			
-			
+			rd.forward(request, response);
 		
 		
 		

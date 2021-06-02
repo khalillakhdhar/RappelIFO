@@ -28,11 +28,11 @@ text-align:center;
 </form>
 <br>
 <%
-if(request.getParameter("message")!=null)
+if(request.getAttribute("message")!=null)
 {
 
 %>
-<h3><%= request.getParameter("message") %></h3>
+<h3><%= request.getAttribute("message") %></h3>
 <% } %>
 
 </body>
