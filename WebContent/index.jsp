@@ -32,7 +32,7 @@ if(request.getAttribute("message")!=null)
 {
 
 %>
-<h3><%= request.getAttribute("message") %></h3>
+<h3 id="resultat"><%= request.getAttribute("message") %></h3>
 <% } %>
 
 </body>
