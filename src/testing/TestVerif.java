@@ -22,6 +22,6 @@ assertTrue(valide.bissextile(2020));
 @Test
 public void verifierdate()
 {
-assertTrue(valide.validJour(29, 2, 2003));	
+assertTrue(valide.validJour(29, 7, 2003));	
 }
 }
