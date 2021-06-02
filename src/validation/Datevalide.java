@@ -32,6 +32,12 @@ public String toString() {
 	return "Datevalide [jour=" + jour + ", mois=" + mois + ", an=" + an + "]";
 }
 
+public Datevalide(int jour, int mois, int an) {
+	this.jour = jour;
+	this.mois = mois;
+	this.an = an;
+}
+
 
 
 
