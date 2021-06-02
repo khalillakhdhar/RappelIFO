@@ -14,7 +14,7 @@ text-align:center;
 <title>Veification de date</title>
 </head>
 <body>
-<form>
+<form action="ValidationServlet" method="post">
 <table align="center">
 <tr><td colspan="2"><h2>Validation de date</h2></td></tr>
 <tr><td>jour</td><td><input name="jour" required type="number" min="1" max="31"></td></tr>
@@ -26,5 +26,14 @@ text-align:center;
 
 
 </form>
+<br>
+<%
+if(request.getParameter("message")!=null)
+{
+
+%>
+<h3><%= request.getParameter("message") %></h3>
+<% } %>
+
 </body>
 </html>
