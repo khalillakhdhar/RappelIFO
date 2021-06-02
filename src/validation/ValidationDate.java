@@ -29,6 +29,30 @@ return false;
 else return true;
 }
 
-
+public boolean validJour(int jour,int mois,int an)
+{
+	if(testJour(jour)&&(testMois(mois))&&(annevalide(an)))
+	{
+		if(medium.contains(mois))
+			return jour<=30;
+		else if(!medium.contains(mois))
+		{
+			if(mois==2)
+			{
+				if(bissextile(an))
+					return jour<=29;
+				else
+					return jour<=28;
+				
+			}
+			else
+			{
+				return jour<=31;
+			}
+		}
+	}
+	
+	return false;
+}
 
 }
